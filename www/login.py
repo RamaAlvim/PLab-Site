@@ -1,15 +1,21 @@
 
-
-<html>
-<body>
-
 <%
-
 import sqlite3 as lite
 import sys
 from subprocess import call
 import os 
 import config
+from server.page import html, textStyle
+from server.managers import sessionManager
+
+html.initHTML(self)
+html.beginHead(self)
+html.setMetaUTF8(self)
+html.endHead(self)
+html.beginContent(self)
+
+
+
 
 os.chdir(config.__WWW_DIR__)
 
@@ -25,11 +31,12 @@ with con:
 
     rows = cur.fetchall()
 
-    for row in rows:
-        print row
+    if len(rows) >= 1:
+        print u"Usuário Encontrado"
+    else:
+        print u"senha inválida"
 
+html.endContent(self)
+html.endHtml(self)
 %>
-
-</body>
-</html>
 
