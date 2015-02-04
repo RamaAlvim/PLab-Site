@@ -6,7 +6,6 @@ import sqlite3 as lite
 import sys
 from subprocess import call
 import os 
-import config
 
 os.chdir(config.__WWW_DIR__)
 
