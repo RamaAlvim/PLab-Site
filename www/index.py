@@ -1,28 +1,15 @@
 <html>
 <body>
 
-<%
-import sqlite3 as lite
-import sys
-from subprocess import call
-import os 
-import config
-
-os.chdir(config.__WWW_DIR__)
-
-con = lite.connect('test.db')
-
-with con:    
-    
-    cur = con.cursor()    
-    cur.execute("SELECT * FROM Users")
-
-    rows = cur.fetchall()
-
-    for row in rows:
-        print row
-
-%>
+<form action="login.py">
+Login:<br>
+<input type="text" name="login" value="">
+<br>
+Passwd:<br>
+<input type="text" name="password" value="">
+<br><br>
+<input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
