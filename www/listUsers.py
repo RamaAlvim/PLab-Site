@@ -28,10 +28,10 @@ with con:
     cur.execute("SELECT * FROM Users")
 
     rows = cur.fetchall()
-
+    print "<table border=10> <tr><th>ID</th><th>Login</th><th>Passwd</th></tr>"
     for x in rows:
-        print str(x['Id']) + "<br>"
-
+        print "<tr><td>" + str(x['Id']) + "</td><td>" + str(x['login']) + "</td><td>"+ str(x['password']) + "</td>"+ "<br>"
+    print "</table>"
 html.endContent(self)
 html.endHtml(self)
 %>
