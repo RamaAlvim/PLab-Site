@@ -32,6 +32,9 @@ with con:
     for x in rows:
         print "<tr><td>" + str(x['Id']) + "</td><td>" + str(x['login']) + "</td><td>"+ str(x['password']) + "</td>"+ "<br>"
     print "</table>"
+
+print "<a href=\"index.py\"> BACK </a>"
+
 html.endContent(self)
 html.endHtml(self)
 %>
