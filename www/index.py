@@ -10,6 +10,7 @@ Passwd:<br>
 <br><br>
 <input type="submit" value="Submit">
 </form>
+<a href="signup.html"> Cadastre </a>
 
 #<!-- PERL USAGE -->
 #<pl%
