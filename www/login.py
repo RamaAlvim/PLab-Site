@@ -5,7 +5,7 @@ import sys
 from subprocess import call
 import os 
 import config
-from server.page import html, textStyle
+from server.page import html, textStyle, javascript
 from server.managers import sessionManager
 
 html.initHTML(self)
@@ -33,9 +33,9 @@ with con:
     rows = cur.fetchall()
 
     if len(rows) >= 1:
-        print u"Usuário Encontrado"
+         javascript.redirect(self, "inicio.py")
     else:
-        print u"senha inválida"
+        print u"senha inválida" #avisa que não encontrou e redireciona para a pagina do index
 
 html.endContent(self)
 html.endHtml(self)
