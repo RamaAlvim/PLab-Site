@@ -1,7 +1,7 @@
 <html>
 <%
 from server.page import html, textStyle
-import psutil
+#import psutil
 
 html.beginHead(self)
 html.setMetaUTF8(self)
@@ -22,7 +22,7 @@ Passwd:<br>
 <a href="listUsers.py"> Listar Usuários </a>
 
 <%
-print ("<br><br><marquee># # CPU Load: " + str(psutil.cpu_percent()))
+#print ("<br><br><marquee># # CPU Load: " + str(psutil.cpu_percent()))
 %>
 #<!-- PERL USAGE -->
 #<pl%
