@@ -15,13 +15,11 @@ rm server.zip
 Configurações
 ```
 cd Pygmy*
-nano config.conf
-Alterar linha: "port = 8080" para "port = 8000"
-Alterar linha: "wwwFolder = ../PLab-Site/www/" para "wwwFolder = ../www/"
-Alterar linha: "allowedDirsAndSubdirs = ['../PLab-Site/www/']" para "allowedDirsAndSubdirs = ['../www/']"
-Pressione Ctrl+X
-Pressione Y 
-Pressione Enter (Retornará ao Shell)
+gedit config.conf    (ou outro editor)
+Alterar linha: "port = 8080" para "port = 8000" (SEM ASPAS)
+Alterar linha: "wwwFolder = ../PLab-Site/www/" para "wwwFolder = ../www/" (SEM ASPAS)
+Alterar linha: "allowedDirsAndSubdirs = ['../PLab-Site/www/']" para "allowedDirsAndSubdirs = ['../www/']" (SEM ASPAS DUPLAS, APENAS SIMPLES INTERNA)
+Salve e retorne ao shell
 ```
 
 Executar
