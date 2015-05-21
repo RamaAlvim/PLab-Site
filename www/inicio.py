@@ -14,10 +14,23 @@ html.setMetaUTF8(self)
 html.endHead(self)
 html.beginContent(self)
 
-print ("DEU CERTO!! hue hue br")
-
-
 os.chdir(config.__WWW_DIR__)
+
+
+print ("Acesso à camera")
+
+
+
+
+
+%>
+<br>
+<br>
+<br>
+<br>
+<a href="index.py"> voltar </a>
+<%
+
 
 
 
