@@ -32,6 +32,12 @@ html.beginContent(self)
         nextScale = "5.0e"+str(int(str(actScale).split("e" )[1])-1)
 
 
+def getScale():
+    return osci.main("q_:timebase:main:scale?")
+def setScale(scale):
+    osci.main(":timebase:main:scale " + scale)
+    return redirect()
+
 """
 <button type="button" onclick="point_it('autoscale')">AutoScale</button>
 <button type="button" onclick="point_it('run')">RUN</button>
@@ -39,39 +45,21 @@ html.beginContent(self)
 <button type="button" onclick="point_it('apply:pulse')">GEN PULSE</button>
 <button type="button" onclick="point_it('apply:RAMP')">GEN RAMP</button>
 <button type="button" onclick="point_it('apply:NOISE')">GEN NOISE</button>
+<br>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-2')">5.0e-2</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-3')">5.0e-3</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-4')">5.0e-4</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-5')">5.0e-5</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-6')">5.0e-6</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-7')">5.0e-7</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-8')">5.0e-8</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-9')">5.0e-9</button>
+<button type="button" onclick="point_it(':timebase:main:scale 5.0e-10')">5.0e-10</button>
+
+
 
 <%
 html.endContent(self)
 html.endHtml(self)
 %>
 
-
-def scale2(request):
-    osci.main(":timebase:main:scale 5.0e-2")
-    return redirect()
-def scale3(request):
-    osci.main(":timebase:main:scale 5.0e-3")
-    return redirect()
-def scale4(request):
-    osci.main(":timebase:main:scale 5.0e-4")
-    return redirect()
-
-def scale5(request):
-    osci.main(":timebase:main:scale 5.0e-5")
-    return redirect()
-def scale6(request):
-    osci.main(":timebase:main:scale 5.0e-6")
-    return redirect()
-
-def scale7(request):
-    osci.main(":timebase:main:scale 5.0e-7")
-    return redirect()
-def scale8(request):
-    osci.main(":timebase:main:scale 5.0e-8")
-    return redirect()
-def scale9(request):
-    osci.main(":timebase:main:scale 5.0e-9")
-    return redirect()
-def scale10(request):
-    osci.main(":timebase:main:scale 5.0e-10")
-    return redirect()
